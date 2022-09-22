@@ -17,9 +17,9 @@ public class ReproducirAnimation : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider col)
+    void OnTriggerEnter(Collider other)
     {
-        if(gameObject.CompareTag("personaje"))
+        if(other.CompareTag("personaje"))
         {
             GetComponentInChildren<Animator>().enabled = true;
         }
